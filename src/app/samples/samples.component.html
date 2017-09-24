@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutAlign=" center">
+  <div fxFlexFill class="samples-container" fxLayout="row" fxLayoutWrap>
+    <div class="sample" fxFlex="33.3" *ngFor="let sample of samples" (click)="open(sample)" [title]="sample.title">
+      <div class="center-cropped" [ngStyle]="{'background-image': 'url(' + sample.thumbnailUri + ')'}">
+      </div>
+    </div>
+  </div>
+</div>
