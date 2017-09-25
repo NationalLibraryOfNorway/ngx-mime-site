@@ -44,14 +44,14 @@ export class SamplesComponent implements OnInit {
       thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_den17demai_null_null_18960815_3_95_1-1_001_null/full/0,600/0/native.jpg'
     },
     {
-      title: 'Hardanger Folkeblad',
-      manifestUri: 'https://api.nb.no/catalog/v1/iiif/93cb7172c539d256148797ff809ba08a/manifest',
-      thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_hardangerfolkeblad_null_null_20170908_68_97_1-1_01_hovedavis/full/0,200/0/native.jpg'
+      title: 'Svalbardposten',
+      manifestUri: 'https://api.nb.no/catalog/v1/iiif/31f37a638813de646ecebbb76634549b/manifest',
+      thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_svalbardposten_null_null_20100611_62_22_1-1_001_null/full/0,600/0/native.jpg'
     },
     {
       title: 'Ms.fol. 406 \"De Danske Ostindiske Etablissementers Historie ved Henning Engelhart.\"',
       manifestUri: 'https://api.nb.no/catalog/v1/iiif/2e0ab7b747d4666f3578cbde20a56ee9/manifest',
-      thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digimanus_270695_0001/full/0,200/0/native.jpg'
+      thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digimanus_270695_0001/full/0,600/0/native.jpg'
     }
   ];
 
