@@ -14,14 +14,12 @@ export class ViewerComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('init');
     this.subscriptions.push(this.route.paramMap.subscribe(q => {
       this.manifestUri = q.get('manifestUri');
     }));
   }
 
   ngOnDestroy() {
-    console.log('destroy');
     this.subscriptions.forEach((subscription: Subscription) => {
       subscription.unsubscribe();
     });

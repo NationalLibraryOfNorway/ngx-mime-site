@@ -35,7 +35,7 @@ export class SamplesComponent implements OnInit {
     },
     {
       title: '17de mai 1918',
-      manifestUri: 'https://api.nb.no/catalog/v1/items/17779451f040dc94349ca14b9ead2d12',
+      manifestUri: 'https://api.nb.no/catalog/v1/iiif/17779451f040dc94349ca14b9ead2d12/manifest',
       thumbnailUri: 'https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digifoto_20160310_00030_NB_NS_NM_09634/full/0,600/0/native.jpg'
     },
     {

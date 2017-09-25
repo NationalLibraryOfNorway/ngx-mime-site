@@ -18,13 +18,8 @@ export function httpClientFactory(handler: HttpHandler) {
 }
 
 const appRoutes: Routes = [
-  { path: 'samples', component: SamplesComponent },
-  { path: 'viewer', component: ViewerComponent },
-  {
-    path: '',
-    redirectTo: '/samples',
-    pathMatch: 'full'
-  },
+  { path: '', component: SamplesComponent },
+  { path: 'viewer', component: ViewerComponent }
 ];
 
 @NgModule({
