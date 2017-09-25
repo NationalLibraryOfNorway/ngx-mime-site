@@ -1,5 +1,5 @@
 <div fxFlexFill fxLayout="column">
   <div fxFlex>
-    <mime-viewer [manifestUri]="manifestUri"></mime-viewer>
+    <mime-viewer *ngIf="manifestUri" [manifestUri]="manifestUri"></mime-viewer>
   </div>
 </div>
