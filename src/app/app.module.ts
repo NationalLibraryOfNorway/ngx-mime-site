@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, HttpHandler, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpHandler, HttpClient } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MimeModule } from '@nationallibraryofnorway/ngx-mime';
 import 'hammerjs';
 
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FlexLayoutModule,
     MimeModule
