@@ -179,9 +179,9 @@
   dependencies:
     tsickle "^0.21.0"
 
-"@nationallibraryofnorway/ngx-mime@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@nationallibraryofnorway/ngx-mime/-/ngx-mime-0.5.0.tgz#6277d89472a8e623bdf633b43557d62260de1475"
+"@nationallibraryofnorway/ngx-mime@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@nationallibraryofnorway/ngx-mime/-/ngx-mime-0.6.0.tgz#15fe7e04b67529829dd646f78be4e8a5d47e4b77"
 
 "@ngtools/json-schema@1.1.0", "@ngtools/json-schema@^1.1.0":
   version "1.1.0"
