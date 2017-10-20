@@ -1,27 +1,40 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
+import { Component, AfterViewInit, ViewChild, Inject, ComponentFactoryResolver } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MimeViewerComponent, MimeViewerConfig } from '@nationallibraryofnorway/ngx-mime';
 
 @Component({
   selector: 'app-viewer',
   templateUrl: './viewer.component.html',
   styleUrls: ['./viewer.component.scss']
 })
-export class ViewerComponent implements OnInit, OnDestroy {
+export class ViewerComponent implements AfterViewInit {
   public manifestUri: string;
-  private subscriptions: Array<Subscription> = [];
+  public mimeConfig = new MimeViewerConfig({
+    attributionDialogHideTimeout: 3
+  });
+  @ViewChild(MimeViewerComponent)
+  private mime: MimeViewerComponent;
 
-  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.subscriptions.push(this.route.paramMap.subscribe(q => {
-      this.manifestUri = q.get('manifestUri');
-    }));
+  constructor(public dialogRef: MatDialogRef<ViewerComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private r: ComponentFactoryResolver) {
+    this.manifestUri = data.manifestUri;
   }
 
-  ngOnDestroy() {
-    this.subscriptions.forEach((subscription: Subscription) => {
-      subscription.unsubscribe();
-    });
+  ngAfterViewInit() {
+    const factory = this.r.resolveComponentFactory(CloseButtonComponent);
+    this.mime.mimeHeaderBeforeRef.createComponent(factory);
   }
+
 }
+
+@Component({
+  template: `
+    <button mat-icon-button class="close-button" [attr.aria-label]="close" [matTooltip]="close" [matDialogClose]="true">
+      <mat-icon>close</mat-icon>
+    </button>
+  `,
+  styles: ['close-button { padding-left: 16px; }']
+})
+export class CloseButtonComponent { }

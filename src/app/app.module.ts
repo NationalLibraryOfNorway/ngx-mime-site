@@ -8,11 +8,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MimeModule } from '@nationallibraryofnorway/ngx-mime';
 import 'hammerjs';
 
+import { MimeSiteMaterialModule } from './mime-site-material.module';
 import { CustomHttp } from './custom-http';
 import { AppComponent } from './app.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { SamplesComponent } from './samples/samples.component';
-import { ViewerComponent } from './viewer/viewer.component';
+import { ViewerComponent, CloseButtonComponent } from './viewer/viewer.component';
 
 export function httpClientFactory(handler: HttpHandler) {
   return new CustomHttp(handler);
@@ -20,14 +21,17 @@ export function httpClientFactory(handler: HttpHandler) {
 
 const appRoutes: Routes = [
   { path: '', component: SamplesComponent },
-  { path: 'viewer', component: ViewerComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewerComponent,
-    SamplesComponent
+    SamplesComponent,
+    CloseButtonComponent
+  ],
+  entryComponents: [
+    CloseButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FlexLayoutModule,
-    MimeModule
+    MimeModule,
+    MimeSiteMaterialModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+
+import { ViewerComponent } from './../viewer/viewer.component';
 
 @Component({
   selector: 'app-samples',
@@ -55,13 +57,20 @@ export class SamplesComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   public open(sample: any) {
-    this.router.navigate(['viewer', { manifestUri: sample.manifestUri }]);
+    const dialogRef = this.dialog.open(ViewerComponent, this.getDialogConfig(sample));
   }
 
+  private getDialogConfig(sample: any): MatDialogConfig {
+    return {
+      width: '100%',
+      height: '100%',
+      data: sample
+    };
+  }
 }
