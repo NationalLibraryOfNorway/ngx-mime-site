@@ -31,6 +31,7 @@ const appRoutes: Routes = [
     CloseButtonComponent
   ],
   entryComponents: [
+    ViewerComponent,
     CloseButtonComponent
   ],
   imports: [

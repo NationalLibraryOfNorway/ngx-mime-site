@@ -31,7 +31,7 @@ export class ViewerComponent implements AfterViewInit {
 
 @Component({
   template: `
-    <button mat-icon-button class="close-button" [attr.aria-label]="close" [matTooltip]="close" [matDialogClose]="true">
+    <button mat-icon-button class="close-button" [attr.aria-label]="'close'" [matTooltip]="'close'" [matDialogClose]="true">
       <mat-icon>close</mat-icon>
     </button>
   `,
