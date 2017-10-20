@@ -35,6 +35,6 @@ export class ViewerComponent implements AfterViewInit {
       <mat-icon>close</mat-icon>
     </button>
   `,
-  styles: ['close-button { padding-left: 16px; }']
+  styles: ['.close-button { padding-left: 16px; }']
 })
 export class CloseButtonComponent { }
