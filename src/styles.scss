@@ -10,3 +10,10 @@ mat-dialog-container {
   max-width: none !important;
   padding: 0px !important;
 }
+
+.mat-divider {
+    display: block;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin: 0;
+}
