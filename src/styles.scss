@@ -6,8 +6,11 @@ html, body {
   margin: 0;
 }
 
-mat-dialog-container {
+.cdk-overlay-pane {
   max-width: none !important;
+}
+
+mat-dialog-container {
   padding: 0px !important;
 }
 
