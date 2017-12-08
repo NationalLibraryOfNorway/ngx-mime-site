@@ -4,10 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS, HttpHandler, HttpClient } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MimeModule } from '@nationallibraryofnorway/ngx-mime';
 import 'hammerjs';
 
+import { environment } from '../environments/environment';
 import { MimeSiteMaterialModule } from './mime-site-material.module';
 import { CustomHttp } from './custom-http';
 import { AppComponent } from './app.component';
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FlexLayoutModule,
     MimeModule,
-    MimeSiteMaterialModule
+    MimeSiteMaterialModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

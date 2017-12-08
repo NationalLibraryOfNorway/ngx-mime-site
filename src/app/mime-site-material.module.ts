@@ -4,7 +4,8 @@ import {
   MatIconModule,
   MatDialogModule,
   MatTooltipModule,
-  MatListModule
+  MatListModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 @NgModule({
@@ -13,7 +14,8 @@ import {
     MatIconModule,
     MatDialogModule,
     MatTooltipModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ],
 })
 export class MimeSiteMaterialModule { }
