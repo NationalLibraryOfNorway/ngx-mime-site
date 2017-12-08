@@ -23,7 +23,7 @@
     {
       "name": "catalog-api",
       "patterns": [
-        "\\/ngx-mime-site\\/\\.\\/catalog\\/.*"
+        "https:\\/\\/api\\.nb\\.no\\/catalog\\/.*"
       ],
       "strategy": "freshness",
       "maxSize": 20,
