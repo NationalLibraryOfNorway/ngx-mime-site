@@ -6,15 +6,7 @@
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
-      "urls": [
-        "/ngx-mime-site/favicon.ico",
-        "/ngx-mime-site/index.html",
-        "/ngx-mime-site/inline.5c92efafc08f000cf2be.bundle.js",
-        "/ngx-mime-site/main.f5a12c9689215167e5c6.bundle.js",
-        "/ngx-mime-site/polyfills.098ef0db456596325f9b.bundle.js",
-        "/ngx-mime-site/scripts.43f667f70794eb9604fd.bundle.js",
-        "/ngx-mime-site/styles.5e993ebbc0ce29ab8ea5.bundle.css"
-      ],
+      "urls": [],
       "patterns": []
     },
     {
@@ -31,7 +23,7 @@
     {
       "name": "catalog-api",
       "patterns": [
-        "\\/catalog\\/.*"
+        "https:\\/\\/api\\.nb\\.no\\/catalog\\/.*"
       ],
       "strategy": "freshness",
       "maxSize": 20,
@@ -40,13 +32,5 @@
       "version": 1
     }
   ],
-  "hashTable": {
-    "/ngx-mime-site/inline.5c92efafc08f000cf2be.bundle.js": "1fab00b635f0d408d87988f029f2dfae6720f985",
-    "/ngx-mime-site/main.f5a12c9689215167e5c6.bundle.js": "9b2fd9b5866f7de7053273f64dd58806373d968d",
-    "/ngx-mime-site/polyfills.098ef0db456596325f9b.bundle.js": "56d6ca05ef74cbf64b21920ce4f36330d3b6df20",
-    "/ngx-mime-site/scripts.43f667f70794eb9604fd.bundle.js": "f85cdb413f25cca2e4c02c2d2d8255c08f388f4e",
-    "/ngx-mime-site/styles.5e993ebbc0ce29ab8ea5.bundle.css": "0d5910f7d102f688a0fb513cf10cd8a37d8e4731",
-    "/ngx-mime-site/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/ngx-mime-site/index.html": "074e8ad01041fb7869cd40c09dc303bae2f2e2cd"
-  }
+  "hashTable": {}
 }
