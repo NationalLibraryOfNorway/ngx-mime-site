@@ -1,18 +1,18 @@
 {
-    "index": "/index.html",
+    "index": "./index.html",
     "assetGroups": [
         {
             "name": "app",
             "installMode": "prefetch",
             "resources": {
                 "files": [
-                    "/favicon.ico",
-                    "/index.html"
+                    "./favicon.ico",
+                    "./index.html"
                 ],
                 "versionedFiles": [
-                    "/*.bundle.css",
-                    "/*.bundle.js",
-                    "/*.chunk.js"
+                    "./*.bundle.css",
+                    "./*.bundle.js",
+                    "./*.chunk.js"
                 ]
             }
         },
@@ -22,7 +22,7 @@
             "updateMode": "prefetch",
             "resources": {
                 "files": [
-                    "/assets/**"
+                    "./assets/**"
                 ],
                 "urls": [
                     "https://fonts.googleapis.com/**"
@@ -34,7 +34,7 @@
         {
             "name": "catalog-api",
             "urls": [
-                "/catalog/**"
+                "https://api.nb.no/catalog/**"
             ],
             "cacheConfig": {
                 "strategy": "freshness",

@@ -44,7 +44,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     MimeModule,
     MimeSiteMaterialModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
