@@ -70,7 +70,8 @@ export class SamplesComponent implements OnInit {
     return {
       width: '100%',
       height: '100%',
-      data: sample
+      data: sample,
+      panelClass: 'viewer-panel'
     };
   }
 }
