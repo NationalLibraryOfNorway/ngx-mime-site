@@ -10,15 +10,18 @@ import { MimeViewerComponent, MimeViewerConfig } from '@nationallibraryofnorway/
 export class ViewerComponent implements AfterViewInit {
   public manifestUri: string;
   public mimeConfig = new MimeViewerConfig({
-    attributionDialogHideTimeout: 3
+    attributionDialogHideTimeout: 3,
+    preserveZoomOnCanvasGroupChange: true,
+    startOnTopOnCanvasGroupChange: true,
+    isDropEnabled: true
   });
-  @ViewChild(MimeViewerComponent)
-  private mime: MimeViewerComponent;
+  @ViewChild(MimeViewerComponent) private mime: MimeViewerComponent;
 
-
-  constructor(public dialogRef: MatDialogRef<ViewerComponent>,
+  constructor(
+    public dialogRef: MatDialogRef<ViewerComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private r: ComponentFactoryResolver) {
+    private r: ComponentFactoryResolver
+  ) {
     this.manifestUri = data.manifestUri;
   }
 
@@ -26,7 +29,6 @@ export class ViewerComponent implements AfterViewInit {
     const factory = this.r.resolveComponentFactory(CloseButtonComponent);
     this.mime.mimeHeaderBeforeRef.createComponent(factory);
   }
-
 }
 
 @Component({
@@ -37,4 +39,4 @@ export class ViewerComponent implements AfterViewInit {
   `,
   styles: ['.close-button { padding-left: 16px; }']
 })
-export class CloseButtonComponent { }
+export class CloseButtonComponent {}
