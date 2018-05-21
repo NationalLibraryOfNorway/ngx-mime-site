@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
+
 import { ViewerComponent } from './../viewer/viewer.component';
 
 export interface Sample {
